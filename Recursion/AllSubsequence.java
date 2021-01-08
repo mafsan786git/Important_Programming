@@ -8,34 +8,21 @@ public class AllSubsequence {
         int n = sc.nextInt();
         sc.nextLine();
         String str = sc.nextLine();
-        ArrayList<String> output = new ArrayList<>();
-        SubSequence(str,0, "",output);
+        SubSequence(str,0,new ArrayList<>());
         sc.close();
     }
-    static void SubSequence(String original,int index,String ans,ArrayList<String> output){
-        
-        if(index == original.length())
-        {
-            if(!output.contains(ans)){
-                System.out.println(ans);
-                output.add(ans);
-            }
-            return ;
+
+    //Same as Subset generator.
+    static void SubSequence(String original,int index,ArrayList<Character> ans){
+        for(Character ch  :ans)
+            System.out.print(ch);
+        if(index != 0)
+            System.out.println();        
+        for (int i = index; i < original.length(); i++) {
+            ans.add(original.charAt(i));
+            SubSequence(original, i+1, ans);
+            ans.remove(ans.size()-1);
         }
-        
-            if(ans != "" && !output.contains(ans))
-            {
-                System.out.println(ans);
-                output.add(ans);
-            }
-            SubSequence(original, index+1, ans+original.charAt(index),output);
-            // if(index == start){
-            //     start = index+1;
-            //     output.clear();
-            // }
-            if(output.size()!=0)
-            output.remove(output.size()-1);
-            SubSequence(original, index+1, ans,output);
     }
     
 }
