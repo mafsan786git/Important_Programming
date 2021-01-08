@@ -10,14 +10,15 @@ public class SubSetOfArray {
         return arr;
     }
     // /* Without using For loop  */
-    public static void SubSets(int[] arr,List<Integer> list,int index){
-        if(index == arr.length)
-            System.out.println(list);
+    public static void SubSets(int n,List<Integer> list,int index){
+        System.out.println(list);
+        if(index > n)
+            return ;
         else{
-            list.add(arr[index]);
-            SubSets(arr, list, index+1);
+            list.add(index);
+            SubSets(n, list, index+1);
             list.remove(list.size()-1);
-            SubSets(arr, list, index+1);
+            SubSets(n, list, index+1);
         }
     }
     
@@ -33,11 +34,11 @@ public class SubSetOfArray {
     // }
 
     public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer input = new StringTokenizer(br.readLine());
-        int[] arr = new int[input.countTokens()];
-        arr = StringToInt(input);
-        SubSets(arr,new ArrayList<>(), 0);
+        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // StringTokenizer input = new StringTokenizer(br.readLine());
+        // int[] arr = new int[input.countTokens()];
+        // arr = StringToInt(input);
+        SubSets(3,new ArrayList<>(), 1);
 
     }
     

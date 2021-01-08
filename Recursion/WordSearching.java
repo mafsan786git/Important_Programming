@@ -39,6 +39,7 @@ public class WordSearching {
         String[] WordStr = new String[]{"oath","pea","eat","rain"};
         for(String word : WordStr)
         {
+            word = "masaischool";
             boolean[][] Visited = new boolean[n][m];
             boolean present = false;
             for (int i = 0; i < n; i++) {
@@ -54,7 +55,9 @@ public class WordSearching {
                 }
             }
             if(present)
-                System.out.println(word);
+                System.out.println("yes");
+            else
+                System.out.println("no");
         }
     }
     static boolean SearchMasai(char[][] matrix,int row,int col,String masai,boolean[][] Visited,int index) {
@@ -67,11 +70,13 @@ public class WordSearching {
         //for every diraction diagonaly,verticaly and horizontally.
         for (int i = -1; i <=1; i++) {
             for (int j = -1; j <=1; j++) {
-                if(row+i == matrix.length || col+j == matrix[0].length || row+i < 0 || col+j < 0 || Visited[row+i][col+j] || matrix[row + i][col+j] != masai.charAt(index))
+                if(row+i == matrix.length || col+j == matrix[0].length || row+i < 0 || col+j < 0)
+                    continue;
+                if(Visited[row+i][col+j] || matrix[row + i][col+j] != masai.charAt(index))
                     continue;
                 if(SearchMasai(matrix, row+i, col+j, masai, Visited, index+1))
                 {
-                    System.out.println(row + " " + col);
+                    // System.out.println(row + " " + col);
                     return true;
                 }
             }

@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LongestStringNotRepeating",
+            "request": "launch",
+            "mainClass": "LongestStringNotRepeating",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch LeetCodeSubSet",
+            "request": "launch",
+            "mainClass": "LeetCodeSubSet",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch DoctorSubsetAgain",
+            "request": "launch",
+            "mainClass": "DoctorSubsetAgain",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch Gift",
+            "request": "launch",
+            "mainClass": "Gift",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch DoctorSubset",
+            "request": "launch",
+            "mainClass": "DoctorSubset",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch FibonacciAgain",
+            "request": "launch",
+            "mainClass": "FibonacciAgain",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinimumPages",
+            "request": "launch",
+            "mainClass": "MinimumPages",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumberWaysStair",
+            "request": "launch",
+            "mainClass": "NumberWaysStair",
+            "projectName": "Recursion_69b55097"
+        },
+        {
+            "type": "java",
             "name": "Launch Investigation",
             "request": "launch",
             "mainClass": "Investigation",
